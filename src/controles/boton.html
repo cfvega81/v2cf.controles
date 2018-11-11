@@ -1,0 +1,12 @@
+<template>
+    <button 
+        class="${redondo ? 'btn-floating' : 'btn'} waves-effect waves-light ${color} ${redondo ? 'tooltipped' : ''}" 
+        type="button" 
+        click.delegate="accion()"
+        data-tooltip="${redondo ? descripcion : ''}"
+        data-position="top"
+        >
+        ${redondo ? '' : descripcion}
+        <i if.bind="icono" class="material-icons right">${icono}</i>
+    </button>
+</template>

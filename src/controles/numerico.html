@@ -1,0 +1,7 @@
+<template>
+    <div class="input-field col ${ancho}">
+        <i class="material-icons prefix" if.bind="icono">${icono}</i>
+        <input id.bind="id" type="text" class="validate" value.bind="valor" keydown.delegate="validar($event)" keypress.delegate="validar($event)"/>
+        <label for.bind="id">${descripcion}</label>
+    </div>
+</template>

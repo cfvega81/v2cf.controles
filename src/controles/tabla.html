@@ -1,0 +1,17 @@
+<template>
+    <table class="striped highlight responsive-table centered">
+        <thead>
+            <tr>
+                <th repeat.for="campo of modelo.campos">
+                    ${campo.titulo || campo.propiedad}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr repeat.for="dato of modelo.datos" class="">
+                <td repeat.for="campo of modelo.campos" innerhtml.bind="mostrarValor(dato, campo)">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</template>

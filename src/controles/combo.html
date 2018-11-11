@@ -1,0 +1,12 @@
+<template>
+    <div class="input-field col ${ancho}">
+        <select id="${id}" value.bind="valor">
+            <option model.bind="null" if.bind="permitirNulo" selected="selected">${seleccioneTexto}</option>
+            <option model.bind="null" disabled="disabled" selected="selected" else>${seleccioneTexto}</option>
+            <option repeat.for="opcion of opciones" model.bind="opcion">
+                ${opcion[llave]} - ${opcion[texto]}
+            </option>
+        </select>
+        <label>${descripcion}</label>
+    </div>
+</template>
